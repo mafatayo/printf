@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define UNISED(x) (void)(x)
+#define UNISED(x) (void) (x)
 #define BUFF_SIZE 1024
 
 /* FLAGS */
@@ -21,14 +21,14 @@
 /**
  * struct fmt - Struct op
  *
- * @fmt: format.
+ * @fmt: The format.
  * @fn: The function associated
  */
 
 struct fmt
 {
 	char fmt;
-	int(*fn)(va_list, char[], int, int, int, int);
+	int (*fn) (va_list, char[], int, int, int, int);
 }
 
 /**
@@ -68,12 +68,11 @@ int print_hexadecimal(va_list types, char buffer[],
 int print_hexa_upper(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 
-int
 int print_hexa(va_list types, char map_to[],
 char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
 /* Functions to print non-printable characters */
-inr print_non_printable(va_list types, char buffer[],
+int print_non_printable(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 
 /* functions to print memry address */
